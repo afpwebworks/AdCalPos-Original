@@ -1,0 +1,27 @@
+a {color : #333394; font-size : 14px; font-family : Arial, Helvetica, sans-serif; font-weight : bold; text-decoration : none;}
+.cal_days {background-color : #333394; color : #b5c3ff; font-size : 14px; font-family : Arial, Helvetica, sans-serif; font-weight : bold;}
+.cal_days a {
+	color : Fuchsia;
+	font-size : 14px;
+	font-family : Arial, Helvetica, sans-serif;
+	font-weight : bold;
+}
+.cal_disabled {color : #a3a3a4; font-size : 14px; font-family : Arial, Helvetica, sans-serif; font-weight : bold;}
+.month {color : #ffffff; font-size : 14px; font-family : Arial, Helvetica, sans-serif; font-weight : bold;}
+.normal_body {
+	background-color : White;
+	font-size : 11px;
+	font-family : Arial, Helvetica, sans-serif;
+}
+.past_days {
+	color : Lime;
+	font-size : 14px;
+	font-family : Arial, Helvetica, sans-serif;
+	font-weight : bold;
+}
+.today {
+	color : Red;
+	font-size : 13px;
+	font-family : Arial, Helvetica, sans-serif;
+	font-weight : bold;
+}

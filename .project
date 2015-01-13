@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Adcalpos_Shades</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.ide.coldfusion.projectNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>db</name>
+			<type>2</type>
+			<location>D:/Sites/customers/LesMustafa/POS/Shadesnstyle/db</location>
+		</link>
+	</linkedResources>
+</projectDescription>

@@ -1,0 +1,61 @@
+/*
+===============================================================================
+Forms styles for CMS
+FormStyles.css
+Author:  Michael Kear,  AFP Webworks  http://afpwebworks.com
+23/8/2010
+Revision history: 
+13/9/2010  All colour information moved to CMSColours.css
+==========================================================================================================
+*/
+fieldset {
+	margin: 3px;
+}
+fieldset.CMSLoginForm {
+	margin: 5px 50px auto;
+}
+fieldset.CMSForm {
+width: 750px;
+	margin: 3px auto;
+	z-index: 1000;
+	
+}
+label {
+	float: left;
+	width: 120px;
+	margin-right: 5px;
+	display: block;
+	font-size: inherit;
+	text-align: right;
+}
+label.error {
+	width: 150px;
+	float: left;
+	padding-left: 5px;
+	display: block;
+	font-weight: 700;
+	font-size: inherit;
+}
+legend {
+	padding: 3px 10px;
+	margin-left: 20px;
+	font: bolder larger;
+	border: 1px solid #000000;
+	background-color: #cccccc;
+}
+textarea {
+	height: 50px;
+}
+.form-row {
+	padding: 5px 0;
+	clear: both;
+}
+.submit {
+	margin-left: 125px;
+	margin-top: 10px;
+}
+input[type=password], select, input[type=text], textarea {
+	float: left;
+	font-size: inherit;
+	font-family: inherit;
+}

@@ -1,0 +1,184 @@
+<beans>
+	<!--
+=====================================================================
+Coldspring Configuration file for Content Management System.
+Author:  Mike Kear,  AFP Webworks
+Client:   AdCalPOS 
+June/July 2010
+=====================================================================
+-->
+	<!--   
+=====================================================================
+configuration/utilities  
+=====================================================================
+ -->
+	<bean id="TimeZoneCFC" class="cfcs.utilities.TimeZone" />
+	<bean id="Pagination" class="cfcs.utilities.Pagination" lazy-init="true"/>
+	<bean id="UtilitiesLibrary" class="cfcs.utilities.UtilitiesLibrary" lazy-init="true">
+		<constructor-arg name="argsConfiguration">
+			<ref bean="configbean"/>
+		</constructor-arg>
+	</bean>
+	<bean id="ErrorHandler" class="cfcs.Utilities.ErrorHandler" singleton="false" lazy-init="true"/>
+	<bean id="configbean" class="cfcs.config.configbean">
+		<constructor-arg name="argsConfigXMLname">
+			<value>/cfcs/config/config.xml</value>
+		</constructor-arg>
+		<constructor-arg name="Timezone">
+			<ref bean="TimeZoneCFC"/>
+		</constructor-arg>
+	</bean>
+	<bean id="MaintenanceMonitor" class="cfcs.PosCore.MaintenanceMonitor">
+			<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+	</bean>
+<!--
+=====================================================================
+POS CFCs 
+=====================================================================
+-->
+<bean id="PosBean" class="cfcs.PosCore.PosBean" singleton="false" />
+<bean id="PosDAO" class="cfcs.PosCore.PosDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="PosLineBean" class="cfcs.PosCore.PosLineBean" singleton="false" />
+<bean id="PosLinesDAO" class="cfcs.PosCore.PosLinesDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="PosMediaBean" class="cfcs.PosCore.PosMediaBean" singleton="false" />
+<bean id="PosMediaDAO" class="cfcs.PosCore.PosMediaDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="Reporting" class="cfcs.PosCore.Reporting">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+		<property name="UserService"><ref bean="UserService"/></property>
+</bean>
+<bean id="Stockmaster" class="cfcs.PosCore.Stockmaster" singleton="false" />
+<bean id="StockmasterDAO" class="cfcs.PosCore.StockmasterDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+		<property name="UserService"><ref bean="UserService"/></property>
+		<property name="MaintenanceMonitor"><ref bean="MaintenanceMonitor"/></property>
+		<property name="PricesDAOService"><ref bean="StockPricesDAO" /></property>
+</bean>
+
+<bean id="StockLocation" class="cfcs.PosCore.StockLocation" singleton="false" />
+<bean id="StockLocationDAO" class="cfcs.PosCore.StockLocationDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+
+<bean id="StockBarcode" class="cfcs.PosCore.StockBarcode" singleton="false" />
+<bean id="StockBarcodesDAO" class="cfcs.PosCore.StockBarcodesDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="PosMixMatch" class="cfcs.PosCore.PosMixMatch" singleton="false" />
+<bean id="PosMixMatchDAO" class="cfcs.PosCore.PosMixMatchDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="PosMixMatchProduct" class="cfcs.PosCore.PosMixMatchProduct" singleton="false" />
+<bean id="PosMixMatchProductDAO" class="cfcs.PosCore.PosMixMatchProductDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="ECRTTotal" class="cfcs.PosCore.ECRTTotal" singleton="false" />
+<bean id="StoreECRTTotalsDAO" class="cfcs.PosCore.StoreECRTTotalsDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="PLUTotal" class="cfcs.PosCore.PLUTotal" singleton="false" />
+<bean id="StorePLUTotalsDAO" class="cfcs.PosCore.StorePLUTotalsDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="EoDSummary" class="cfcs.PosCore.EoDSummary" singleton="false" />
+<bean id="EoDSummaryDAO" class="cfcs.PosCore.EoDSummaryDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="Maintenance" class="cfcs.PosCore.Maintenance" singleton="false" >
+<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+<bean id="DataTransferManager" class="cfcs.PosCore.DataTransferManager" lazy-init="true" >
+<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+</bean>
+
+<bean id="StoreBean" class="cfcs.Enterprise.StoreBean" singleton="false" />
+<bean id="StoresDAO" class="cfcs.Enterprise.StoresDAO" lazy-init="true">
+	<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+	<property name="UserService"><ref bean="UserService"/></property>
+</bean>	
+
+<bean id="StockPrice" class="cfcs.PosCore.StockPrice" singleton="false" />
+<bean id="StockPricesDAO" class="cfcs.PosCore.StockPricesDAO">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+		<property name="UserService"><ref bean="UserService" /></property>
+</bean>
+<bean id="ProductPrice" class="cfcs.PosCore.ProductPrice" singleton="false" />
+<!--
+=====================================================================
+Enterprise CFCs 
+=====================================================================
+-->
+
+<bean id="Menus" class="cfcs.Enterprise.Menus" lazy-init="true">
+	<constructor-arg name="argsConfiguration">
+			<ref bean="configbean"/>
+		</constructor-arg>
+		<property name="UserService">
+			<ref bean="UserService"/>
+		</property>
+</bean>	
+<bean id="StoresDAO" class="cfcs.Enterprise.StoresDAO" lazy-init="true">
+	<constructor-arg name="argsConfiguration">
+			<ref bean="configbean"/>
+		</constructor-arg>
+		<property name="UserService">
+			<ref bean="UserService"/>
+		</property>
+</bean>		
+	
+
+<!--
+=====================================================================
+  Users 
+=====================================================================
+-->
+	<bean id="User" class="cfcs.Users.User" singleton="False"/>
+	<bean id="UserService" class="cfcs.Users.UserService"/>
+	<bean id="UsersDAO" class="cfcs.Users.UsersDAO" lazy-init="true">
+		<constructor-arg name="argsConfiguration">
+			<ref bean="configbean"/>
+		</constructor-arg>
+	</bean>
+	<bean id="UserAccessLevel" class="cfcs.Users.UserAccessLevel" singleton="False" lazy-init="true"/>
+	<bean id="UserAccessLevelsDAO" class="cfcs.users.UserAccessLevelsDAO" lazy-init="true">
+		<constructor-arg name="argsConfiguration">
+			<ref bean="configbean"/>
+		</constructor-arg>
+		<property name="UserService">
+			<ref bean="UserService"/>
+		</property>
+	</bean>
+	<bean id="UserAccess" class="cfcs.Users.UserAccess" lazy-init="true">
+		<constructor-arg name="argsConfiguration">
+			<ref bean="configbean"/>
+		</constructor-arg>
+	</bean>
+	<bean id="AccessManager" class="cfcs.Users.AccessManager" lazy-init="true">
+		<constructor-arg name="argsConfiguration">
+			<ref bean="configbean"/>
+		</constructor-arg>
+		<property name="UserService">
+			<ref bean="UserService"/>
+		</property>
+	</bean>
+	
+<!--
+=====================================================================
+  Security/ Task forms
+ =====================================================================
+-->	
+
+<bean id="TaskFormBean" class="cfcs.securitypermissions.TaskFormBean" singleton="False" lazy-init="true"/>
+	<bean id="TaskFormsDAO" class="cfcs.securitypermissions.TaskFormsDAO" lazy-init="true">
+		<constructor-arg name="argsConfiguration"><ref bean="configbean"/></constructor-arg>
+		<property name="UserService"><ref bean="UserService"/></property>
+	</bean>
+	
+	
+	
+</beans>

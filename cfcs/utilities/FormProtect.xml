@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formprotectIni>
+	<testsToRun>
+		<mousemovement>1</mousemovement>
+		<UsedKeyboard>1</UsedKeyboard>
+		<timedFormSubmission>1</timedFormSubmission>
+		<HiddenFormField>1</HiddenFormField>
+		<akismet>0</akismet>
+		<tooManyUrls>1</tooManyUrls>
+		<testStrings>1</testStrings>
+		<locations>1</locations>
+		<alreadybanned>1</alreadybanned>
+	</testsToRun>
+	<settingsForTests>
+		<timedFormMinSeconds>5</timedFormMinSeconds>
+		<timedFormMinSeconds>3600</timedFormMinSeconds>
+		<encryptionKey>JacobMuns0n</encryptionKey>
+		<akismetAPIKey/>
+		<akismetBlogURL/>
+		<akismetFormNameField/>
+		<akismetFormEmailField/>
+		<akismetFormURLField/>
+		<akismetFormBodyField/>
+		<tooManyUrlsMaxUrls>6</tooManyUrlsMaxUrls>
+		<spamstrings>free music,download music,music downloads,viagra,phentermine,viagra,tramadol,ultram,prescription soma,cheap soma,cialis,levitra,weight loss,buy cheap</spamstrings>
+	</settingsForTests>
+	<pointsfortest>
+		<mouseMovementPoints>1</mouseMovementPoints>
+		<usedKeyboardPoints>1</usedKeyboardPoints>
+		<timedFormPoints>2</timedFormPoints>
+		<hiddenFieldPoints>3</hiddenFieldPoints>
+		<akismetPoints>3</akismetPoints>
+		<tooManyUrlsPoints>3</tooManyUrlsPoints>
+		<spamStringPoints>2</spamStringPoints>
+		<locationPoints>2</locationPoints>
+		<alreadybannedPoints>3</alreadybannedPoints>
+	</pointsfortest>
+	<settings>
+		<failureLimit>3</failureLimit>
+		<emailFailedTests>0</emailFailedTests>
+		<emailServer/>
+		<emailUserName/>
+		<emailPassword/>
+		<emailFromAddress/>
+		<emailToAddress/>
+		<emailSubject/>
+		<logFailedTests>0</logFailedTests>
+		<logFile/>
+	</settings>
+</formprotectIni>

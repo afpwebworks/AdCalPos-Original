@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<!--- KF 020103<link rel="stylesheet" type="text/css" href="cf/costi.css"> --->
+<link rel="stylesheet" type="text/css" href="costi.css"> 
+	<title>login</title>
+
+<script language="JavaScript">
+  <!--
+	 function SetTheFocus(){
+	  document.frmLogin.txtUserName.focus();	
+     }
+  -->
+</script>
+</head>
+
+<body onLoad="SetTheFocus();">
+<div align="center"><img src="/images/LogoSignOnTop.jpg" width="32" height="32"> 
+<!--- KF 020103 <img src="images/LandscapeBlue.jpg" width="100%" height="105">  --->
+
+<form name="frmLogin" method="post" action="/cf/frmLogin_Action.cfm">
+  <!--- KF 020103<form name="frmLogin" method="post" action="cf/frmLogin_Action.cfm"> --->
+  <table width="90%" border="0" align="center">
+    <tr bordercolor="#99CCFF"> 
+      <td colspan="2"> <div align="center"><font size="4"><b><font size="5" color="#FFFFFF" face="Tahoma">Login</font></b></font></div></td>
+    </tr>
+    <tr bordercolor="#99CCFF"> 
+      <td width="100%"><div align="center"><b><font face="Tahoma" size="3" color="#FFFFFF"> 
+          User Name 
+          <input type="text" name="txtUserName">
+          </font></b></div></td>
+    </tr>
+    <tr bordercolor="#99CCFF"> 
+      <td><div align="center"><b><font face="Tahoma" size="3" color="#FFFFFF"> 
+          Password &nbsp; 
+          <input type="password" name="txtPassword">
+          </font></b></div></td>
+      
+    <tr valign="bottom" bordercolor="#99CCFF"> 
+      <td><div align="center"><b><font face="Tahoma" size="3" color="#FFFFFF"> 
+          <input type="submit" name="submit" value="            Enter          ">
+          <input type="reset" name="cancel" value="         Cancel         ">
+          </font></b></div></td>
+      <td width="0%"> <div align="left"> </div></td>
+    </tr>
+  </table>
+  <b><font face="Tahoma" size="3" color="#FFFFFF"> </font></b> 
+  <div align="center"><img src="/images/Login1.jpg" width="867" height="266"> 
+  </div>
+</form>
+</body>
+</html>

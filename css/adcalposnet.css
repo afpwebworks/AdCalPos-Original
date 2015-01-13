@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	background: #c0c0c0;
+	font-family: Tahoma;
+	font-size: 85%;
+	position: absolute;
+	width: 100%;
+}
+
+body { margin-left: 15px; text-align:center;  }
+
+#report {text-align: center; }
+
+#report table { border: 2px solid #4682b4; border-collapse: collapse; font-size: 1.0em;  margin: 0 45px auto;}
+
+#report th {
+	padding: 3px 10px;
+	color: #ffffff;
+	background: #4682b4;
+	font-weight: 600;
+	text-align: center;	
+}
+
+#report tr.lite { background: #ebf2f8 }
+
+#report tr.dark { background: #d1e1f0 }
+
+#report tr.subtotal {
+	border-top: 2px solid #2c587a;
+	border-bottom: 2px solid #2c587a;
+	background: #b2cde2
+}
+
+#report tr.grandtotal {
+	border-top: 2px solid #000000;
+	border-bottom: double #000000;
+	background: #2c587a;
+	color: #ffffff;
+	font-weight: 600
+}
+
+#report td {
+	border: 1px solid #4682b4;
+	padding: 3px 5px;
+	color: #000000
+}

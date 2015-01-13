@@ -1,0 +1,13 @@
+  LsSql = "SELECT Pos.StoreID, Pos.TerminalID"
+  LsSql = LsSql & ", Pos.Timestamp, Pos.PosType"
+  LsSql = LsSql & ", SUM(PosLine.Quantity) AS SalesQty"
+  LsSql = LsSql & ", SUM(PosLine.SellExt) AS SalesGross"
+  LsSql = LsSql & ", SUM(CASE WHEN PosLine.DiscountType = 0 THEN PosLine.DiscountExt ELSE 0 END) + SUM(PosLine.MixMatchExt) + SUM(PosLine.SubTotalDiscountExt)  AS SalesDiscount"
+  LsSql = LsSql & ", SUM(CASE WHEN PosLine.DiscountType = 1 THEN PosLine.DiscountExt ELSE 0 END) + SUM(PosLine.SubTotalSurchargeExt)  AS SalesSurcharge"
+  LsSql = LsSql & ", SUM(PosLine.SaleExt) AS SalesNet"
+  LsSql = LsSql & " FROM Pos"
+  LsSql = LsSql & " RIGHT JOIN PosLine ON Pos.PosTxID = PosLine.PosTxID"
+  LsSql = LsSql & " WHERE " & "(Pos.Timestamp >= " & PsSqlDate2(LoCriteria.DateFrom) & " And  Pos.Timestamp <= " & PsSqlDate2(LoCriteria.DateTo) & ")"
+  LsSql = LsSql & " AND NOT Pos.PosType IN (" & ozePosTypeCancelled & ", 11, 12, 13, 14, 15)"
+  LsSql = LsSql & " GROUP BY Pos.StoreID, Pos.TerminalID, Pos.Timestamp, Pos.PosType"
+  

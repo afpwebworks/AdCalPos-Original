@@ -1,0 +1,90 @@
+body {
+	font-family : Tahoma;
+	font-size : 8pt;
+	color : Black;
+	background : #E0E0E0;
+	margin-left : 0px;
+	margin-top : 0px;
+	margin-right : 0px
+}
+h1 { font-family : Tahoma; font-size : 16pt; font-weight : bold; font-style : normal; text-align : center; color : black; margin-bottom : 0px }
+h2 { font-family : Tahoma; font-size : 14pt; font-weight : bold; font-style : normal; color : black; margin-bottom : 0px }
+h3 { font-family:  Tahoma; font-size : 12pt; font-weight : normal; font-style : normal; color : Black; margin-bottom : 0px }
+h4 { font-family:  Tahoma; font-size : 10pt; font-weight : normal; font-style : normal; color : black; margin-bottom : 0px }
+h5 { font-family:  Tahoma; font-size : 8pt; font-weight : normal; font-style : normal; color : black; margin-bottom : 0px }
+h6 { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; font-size: 8pt }
+h7 { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; font-size: 24pt }
+h8 { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; font-size: 30pt }
+h9 { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; font-size: 18pt }
+h10 { font-family: Times, Times, Garamond; font-weight: bold; font-style: normal; font-size: 12pt; text-align : center }
+.MenuHead {
+	font-family : Tahoma;
+	font-size : 16pt;
+	font-weight : bold;
+	font-style : normal;
+	text-align : left;
+	color : White;
+	margin-bottom : 0px;
+	background-color: #666666;
+}
+.MenuItemLeft {
+	font-family : Tahoma;
+	font-size : 10pt;	
+	font-style : normal;
+	text-align : left;
+	color : black;
+	margin-bottom : 0px;	
+}
+.MenuItemRight {
+	font-family : Tahoma;
+	font-size : 10pt;	
+	font-style : normal;	
+	text-align : right;
+	color : White;
+	margin-bottom : 0px;	
+}
+a:link{
+	font-family: Arial, Helvetica, sans-serif;
+	/*font-size: 12px;*/
+	color: black;
+	text-decoration: none;
+}
+a:visited{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: Black;
+	text-decoration: none;
+}
+
+.textbox { background : #0033FF; color: #ffffff;}
+.redText { color: red;}
+
+
+.reportData { font-family: Arial, Arial, Helvetica; font-weight: normal; font-style: normal; font-size: 8pt }
+
+.buttonWidth { width:250px; }
+.buttonWidth1 { width:200px; }
+
+.horizTable{ border-bottom: 0px; }
+
+.errorhandler {
+	border: 2px solid #FF3300;
+	background-color: #ffccbf;
+	text-align: center;
+	padding: 10px 20px;
+}
+
+/*Styles for tables in CFGRID replacement   #F1787A*/
+	tr.odd {background-color: #F4F4F8;}
+	tr.even {background-color: #FFFFFF;}
+	tr.rowHighlight {
+		background-color: #A9D8EC  ; 
+		 cursor: pointer;
+		}
+
+	th.header {
+		background-color: #333333;
+		color: #ffffff;
+		font-weight: bold;
+		padding: 3px 5px;	
+	}

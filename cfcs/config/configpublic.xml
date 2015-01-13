@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Configuration file for Public site
+Author:  Mike Kear,  AFP Webworks
+Client:   a La Castina School of Wholistic Horsemanship
+September/October 2008
+-->
+<settings>
+	<globals>
+		<pageincrement>7</pageincrement>
+		<addNewContentAt>top</addNewContentAt>
+		<addNewPageAt>top</addNewPageAt>
+		<formskin>red</formskin>
+		<scriptsource>/cms/forms/scripts</scriptsource>
+		<fckeditorbasepath>/cms/forms/fckeditor</fckeditorbasepath>
+		<fckeditorConfig>/cms/forms/FCKEditorConfig_Public.js</fckeditorConfig>
+		<MinaccesslevelEdit>20</MinaccesslevelEdit>
+		<minaccessLevelApprove>90</minaccessLevelApprove>
+		<templatecategorynames>page,content,gallery,galleryimage,pod</templatecategorynames>
+		<podsenabled>true</podsenabled>
+		<hometimezone>Australia/Sydney</hometimezone>
+		<urlvar>page</urlvar>
+	</globals>
+	<images>
+		<photos>
+			<height>650</height>
+			<width>650</width>
+		</photos>
+		<thumbnails>
+			<height>220</height>
+			<width>220</width>
+		</thumbnails>
+		<icons>
+			<height>110</height>
+			<width>110</width>
+		</icons>
+	</images>
+	<paths>
+		<ABS>
+			<uploaddir>\images\userfiles</uploaddir>
+			<gallery>
+				<photos>\images\galleries\Photos</photos>
+				<thumbnails>\images\galleries\Thumbnails</thumbnails>
+			</gallery>
+			<Userfiles>
+				<photos>\Images\Userfiles\Photos</photos>
+				<thumbnails>\images\Userfiles\Thumbnails</thumbnails>
+				<icons>\images\Userfiles\Icons</icons>
+				<attachments>\images\Userfiles\attachments</attachments>
+				<featureimages>\cms\images\Userfiles\featureimages</featureimages>
+			</Userfiles>
+		</ABS>
+		<URL>
+			<uploaddir>/images/Userfiles</uploaddir>
+			<gallery>
+				<photos>/images/galleries/Photos</photos>
+				<thumbnails>/images/galleries/Thumbnails</thumbnails>
+			</gallery>
+			<Userfiles>
+				<photos>/Images/Userfiles/Photos</photos>
+				<thumbnails>/images/Userfiles/Thumbnails</thumbnails>
+				<icons>/images/Userfiles/Icons</icons>
+				<attachments>/images/Userfiles/attachments</attachments>
+				<featureimages>/cms/images/Userfiles/featureimages</featureimages>
+			</Userfiles>
+		</URL>
+	</paths>
+	<development>
+		<dsn>alacastina</dsn>
+		<bansdsn>HawkesburyRadioCMS</bansdsn>
+		<sitename>[DEV Alacastina]</sitename>
+		<mailserver>mail.m.iinet.net.au</mailserver>
+		<mailuser>mkear@iinet.net.au</mailuser>
+		<mailpassword>mdjeq7xqb</mailpassword>
+		<sitemailindex>[DEV Alacastina ]</sitemailindex>
+		<webmasteremail>webmaster@alacastinaswh.com.au</webmasteremail>
+		<salesemail>mkear@afpwebworks.com</salesemail>
+		<supportemail>mkear@afpwebworks.com</supportemail>
+		<manageremail>mkear@afpwebworks.com</manageremail>
+		<approotURL>http://dev.Alacastina</approotURL>
+		<approotABS>e:\sites\Customers\alacastina\alacastinaswh.com.au\site\web</approotABS>
+		<cmsABS>e:\sites\Customers\alacastina\alacastinaswh.com.au\site\web\cms</cmsABS>
+		<cmsURL>http://dev.alacastinacms</cmsURL>
+	</development>
+	<production>
+		<dsn>alacastina</dsn>
+		<bansdsn>HawkesburyRadio</bansdsn>
+		<sitename>A La Castina School of Wholistic Horsemanship</sitename>
+		<mailserver>mail.alacastinaswh.com.au</mailserver>
+		<mailuser>mkear@alacastinaswh.com.au</mailuser>
+		<mailpassword>k108w344</mailpassword>
+		<sitemailindex>[a la Castina SWH]</sitemailindex>
+		<webmasteremail>mkear@alacastinaswh.com.au</webmasteremail>
+		<salesemail>mkear@alacastinaswh.com.au</salesemail>
+		<supportemail>mkear@alacastinaswh.com.au</supportemail>
+		<manageremail>mkear@alacastinaswh.com.au</manageremail>
+		<approotURL>http://alacastinaswh.com.au</approotURL>
+		<approotABS>e:\domains\alacastinaswh.com.au\wwwroot</approotABS>
+		<cmsABS>e:\domains\alacastinaswh.com.au\wwwroot\cms</cmsABS>
+		<cmsURL>http://cms.alacastinaswh.com.au</cmsURL>
+	</production>
+</settings>

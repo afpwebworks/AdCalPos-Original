@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Configuration file for AdCal Point of Sale
+Author:  Mike Kear,  AFP Webworks
+Client:   AdCalPos
+April 2010
+-->
+<settings>
+	<globals>
+		<!--<scriptsource>/cfide/scripts</scriptsource>-->
+		<fckeditorbasepath>/cfide/fckeditor</fckeditorbasepath>
+		<fckeditorConfig>/cfide/FCKEditorConfig_CMS.js</fckeditorConfig>
+		<formskin>green</formskin>
+		<hometimezone>Australia/Sydney</hometimezone>
+		<mgmtReportCutoff>5</mgmtReportCutoff>
+	</globals>
+	<paths>
+		<ABS>
+			<uploaddir>\images\userfiles</uploaddir>
+			<Userfiles>
+				<photos>\Images\Userfiles\Photos</photos>
+				<thumbnails>\images\Userfiles\Thumbnails</thumbnails>
+				<icons>\images\Userfiles\Icons</icons>
+				<attachments>\images\Userfiles\attachments</attachments>
+			</Userfiles>
+		</ABS>
+		<URL>
+			<uploaddir>/images/Userfiles</uploaddir>
+			<Userfiles>
+				<photos>/Images/Userfiles/Photos</photos>
+				<thumbnails>/images/Userfiles/Thumbnails</thumbnails>
+				<icons>/images/Userfiles/Icons</icons>
+				<attachments>/images/Userfiles/attachments</attachments>
+			</Userfiles>
+		</URL>
+	</paths>
+	<Development>
+		<dsn>adcalposShadesnstyle</dsn>
+		<ftpdsn>adcalstandalone</ftpdsn>
+		<bansdsn>HawkesburyRadioCMS</bansdsn>
+		<sitename>[DEV Shadesnstyle AdCal POS]</sitename>
+		<currentversion>1</currentversion>
+		<scriptsource>http://localhost/CFIDE/scripts</scriptsource>
+		<mailserver>mail.afpwebworks.com</mailserver>
+		<mailuser>mkear@afpwebworks.com</mailuser>
+		<mailpassword>dk68mqg66</mailpassword>
+		<sitemailindex>[DEV Shadesnstyle AdCal POS]</sitemailindex>
+		<webmasteremail>mkear@afpwebworks.com</webmasteremail>
+		<salesemail>mkear@afpwebworks.com</salesemail>
+		<supportemail>mkear@afpwebworks.com</supportemail>
+		<manageremail>mkear@afpwebworks.com</manageremail>
+		<approotURL>http://dev.shadesnstylenet</approotURL>
+		<approotABS>E:\sites\Customers\LesMustafa\POS\Shadesnstyle\wwwroot</approotABS>
+		<cmsABS>E:\sites\Customers\LesMustafa\POS\Shadesnstyle\wwwroot</cmsABS>
+		<cmsURL>http://dev.shadesnstylenet</cmsURL>
+		<dbABS>D:\sites\Customers\LesMustafa\POS\adcalpos.net.au\db</dbABS>
+	</Development>
+	<production>
+		<dsn>adcalposShadesnstyle</dsn>
+		<ftpdsn>adcalstandalone</ftpdsn>
+		<bansdsn>HawkesburyRadio</bansdsn>
+		<sitename>ShadesnStyle AdCal POS</sitename>
+		<currentversion>1</currentversion>
+		<scriptsource>http://localhost/CFIDE/scripts</scriptsource>
+		<mailserver>mail.adcalpos.net.au</mailserver>
+		<mailuser>mkear@adcalpos.net.au</mailuser>
+		<mailpassword>k108w344</mailpassword>
+		<sitemailindex>[ShadesnStyle AdCal POS Trans]</sitemailindex>
+		<webmasteremail>mkear@adcalpos.net.au</webmasteremail>
+		<salesemail>mkear@adcalpos.net.au</salesemail>
+		<supportemail>mkear@adcalpos.net.au</supportemail>
+		<manageremail>mkear@adcalpos.net.au</manageremail>
+		<approotURL>http://shadesnstyle.adcalpos.net.au</approotURL>
+		<approotABS>e:\domains\adcalpos.net.au\wwwroot\shadesnstyle</approotABS>
+		<cmsABS>e:\domains\adcalpos.net.au\wwwroot\shadesnstyle</cmsABS>
+		<cmsURL>http://shadesnstyle.adcalpos.net.au</cmsURL>
+		<dbABS>e:\domains\adcalpos.net.au\db</dbABS>
+	</production>
+</settings>
